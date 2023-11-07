@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
 import 'package:opencv_4/factory/colormaps/applycolormap_factory.dart';
@@ -517,12 +516,11 @@ class Cv2 {
     required double colorWindowRadius,
   }) async {
     /// Variable to store operation result
-    final Uint8List? result =
-        await PyrMeanShiftFilteringFactory.pyrMeanShiftFiltering(
-            pathFrom: pathFrom,
-            pathString: pathString,
-            spatialWindowRadius: spatialWindowRadius,
-            colorWindowRadius: colorWindowRadius);
+    final Uint8List? result = await PyrMeanShiftFilteringFactory.pyrMeanShiftFiltering(
+        pathFrom: pathFrom,
+        pathString: pathString,
+        spatialWindowRadius: spatialWindowRadius,
+        colorWindowRadius: colorWindowRadius);
 
     /// Function returns the response from method channel
     return result;
@@ -622,10 +620,7 @@ class Cv2 {
   }) async {
     /// Variable to store operation result
     final dynamic result = await DistanceTransformFactory.distanceTransform(
-        pathFrom: pathFrom,
-        pathString: pathString,
-        distanceType: distanceType,
-        maskSize: maskSize);
+        pathFrom: pathFrom, pathString: pathString, distanceType: distanceType, maskSize: maskSize);
 
     /// Function returns the response from method channel
     return result;

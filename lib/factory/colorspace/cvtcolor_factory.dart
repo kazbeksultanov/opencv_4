@@ -1,4 +1,6 @@
-/* 
+// ignore_for_file: unnecessary_import
+
+/*
  * Copyright (c) 2021 fgsoruco.
  * See LICENSE for more details.
  */
